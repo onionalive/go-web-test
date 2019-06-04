@@ -26,6 +26,7 @@ This ones obvious!
 ## Setup
 
 *Frontend*
+
 Youll need to run a few commands from the `frontend` directory, so cd into that
 
 ```bash
@@ -37,9 +38,11 @@ $ yarn run build // build src files and output to dist folder
 This should install and build everything. As noted, the output will be in the dist folder - this is what go will be loading
 
 *backend*
+
 This is the easier part, you have a few options here
 
 1) Running from source
+
 cd back into the project root, and run
 ```bash
 $ go run main.go
@@ -48,7 +51,8 @@ $ go run main.go
 This will execute the go code in that terminal window, and serve the files
 
 2) Compiling and executing from executable
-Again, cd back into project root, then fun
+
+Again, cd back into project root, then run
 ```bash
 $ go build
 ```
