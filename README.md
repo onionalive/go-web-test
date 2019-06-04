@@ -7,6 +7,60 @@ Make sure you clone this repo in the correct location and follow go protocol.
 The install path, in `*nix` systems is - `~/go/src/github.com/onionalive/go-web-test`.
 Further reading on this can be found [here](https://astaxie.gitbooks.io/build-web-application-with-golang/en/02.1.html).
 
+## Requirements
+
+*npm*
+*yarn*
+
+`yarn` is a package manager on top on npm. It's similar, but with a lot of nice additional features.
+
+If you already have npm installed, you can install yarn via:
+```bash
+$ npm install -g yarn
+```
+
+*go*
+
+This ones obvious!
+
+## Setup
+
+*Frontend*
+Youll need to run a few commands from the `frontend` directory, so cd into that
+
+```bash
+$ cd frontend
+$ yarn install // install required packages
+$ yarn run build // build src files and output to dist folder
+```
+
+This should install and build everything. As noted, the output will be in the dist folder - this is what go will be loading
+
+*backend*
+This is the easier part, you have a few options here
+
+1) Running from source
+cd back into the project root, and run
+```bash
+$ go run main.go
+```
+
+This will execute the go code in that terminal window, and serve the files
+
+2) Compiling and executing from executable
+Again, cd back into project root, then fun
+```bash
+$ go build
+```
+
+This will create an executable in the project root called `go-web-test`. You should be able to double click this, it should open its own terminal window and serve the same files
+
+## Loading the page
+
+After following the setup instructions, simgply navigate to `http://localhost:9090` and you should see the page!
+
+If you want to change the port, you can change that in `main.go` on the http.ListenAndServe function call.
+
 ## Commands
 Basic go commands:
 
